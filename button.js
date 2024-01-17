@@ -6,16 +6,16 @@ export default function Button({ label, theme }) {
     return (
       <View style={[styles.buttonContainer, { borderWidth: 4, borderColor: "#ffd33d", borderRadius: 18 }]}>
         <Pressable
-          style={[styles.button, { backgroundColor: "#fff" }]}
+          style={[styles.button, { backgroundColor: "#ff2900" }]}
           onPress={() => alert('You pressed a button.')}
         >
           <FontAwesome
             name="picture-o"
             size={18}
-            color="#25292e"
+            color="#25292ex"
             style={styles.buttonIcon}
           />
-          <Text style={[styles.buttonLabel, { color: "#25292e" }]}>{label}</Text>
+          <Text style={[styles.buttonLabel, { color: "orange" }]}>{label}</Text>
         </Pressable>
       </View>
     );
@@ -30,6 +30,29 @@ export default function Button({ label, theme }) {
   );
 }
 
+
 const styles = StyleSheet.create({
-  // Styles from previous step remain unchanged.
+  buttonContainer: {
+    width: 320,
+    height: 68,
+    marginHorizontal: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 3,
+  },
+  button: {
+    borderRadius: 10,
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+  },
+  buttonIcon: {
+    paddingRight: 8,
+  },
+  buttonLabel: {
+    color: '#fff',
+    fontSize: 16,
+  },
 });
